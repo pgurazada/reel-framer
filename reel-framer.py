@@ -2,20 +2,22 @@ import json
 import requests
 
 
-with open('creds.json', 'r') as as_creds:
+with open('anyscale-creds.json', 'r') as as_creds:
     data = as_creds.read()
 
 creds = json.loads(data)
 
-api_base = creds["anyscale_base_url"]
+api_base = "https://api.endpoints.anyscale.com/v1"
 api_key = creds["anyscale_api_key"]
 url = f"{api_base}/chat/completions"
 
+# Beware of Anyscale timeouts for Mixtral;
+# Zephyr and Mistral-OpenOrca are good fallbacks 
 model_name = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 
 s = requests.Session()
 
-# News Extractor
+# Step 1: Extract News
 
 news_extractor_system_message = """
 You are tasked to extract key information from news articles.
@@ -61,17 +63,25 @@ prompt_for_news_extraction = [
     }
 ]
 
-body = {
+news_extraction_payload = {
   "model": model_name,
   "messages": prompt_for_news_extraction,
-  "temperature": 0,
+  "temperature": 0.6,
   "max_tokens": 8192
 }
 
-with s.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=body) as resp:
-    news_extraction_output = json.loads(resp.json()['choices'][0]['message']['content'])
 
-# Comedic Analogy
+news_extraction_payload = {
+    "model": model_name,
+    "messages": prompt_for_news_extraction,
+    "temperature": 0.6,
+    "max_tokens": 8192
+}
+
+with s.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=news_extraction_payload) as resp:
+    news_extraction_output = json.loads(resp.json()['choices'][0]['message']['content'])
+    
+# Step 2: Create Comedic Analogy
 
 comedic_analogy_prompt_template = """
 1. List three unique comedic analogies for the situation in the following story:
@@ -80,9 +90,9 @@ comedic_analogy_prompt_template = """
 3. To act out this analogous premise use the location mentioned here: {news_setting}
 
 Return your output as a JSON with the three analogies as keys like so:
-- Comedic Analogy 1: <first analogy>,
-- Comedic Analogy 2: <second analogy>,
-- Comedic Analogy 3: <third analogy>
+- comedic analogy 1: <first analogy>,
+- comedic analogy 2: <second analogy>,
+- comedic analogy 3: <third analogy>
 """
 
 user_prompt_for_comedic_analogy = comedic_analogy_prompt_template.format(
@@ -102,17 +112,18 @@ prompt_for_comedic_analogy = [
     }
 ]
 
-body = {
-  "model": model_name,
-  "messages": prompt_for_comedic_analogy,
-  "temperature": 0,
-  "max_tokens": 8192
+
+comedic_analogy_payload = {
+    "model": model_name,
+    "messages": prompt_for_comedic_analogy,
+    "temperature": 0.6,
+    "max_tokens": 8192
 }
 
-with s.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=body) as resp:
+with s.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=comedic_analogy_payload) as resp:
     comedic_analogies = json.loads(resp.json()["choices"][0]["message"]["content"])
 
-# Create Script
+# Step 3: Create Script
     
 comedic_script_prompt_template = """
 Write a script for a comedy skit about: {script_plot}. Cover the following information: {news_information_points}.
@@ -123,7 +134,7 @@ Each line of dialogue should be short - less than 20 words. End it with a punchl
 """
 
 user_prompt_for_comedic_script = comedic_script_prompt_template.format(
-    script_plot=comedic_analogies['Comedic Analogy 1'],
+    script_plot=comedic_analogies['comedic analogy 1'],
     news_information_points=news_extraction_output['news information points'],
     news_characters_and_their_main_activities=news_extraction_output['news characters and their main activities'],
     news_setting=news_extraction_output['news setting']
@@ -140,14 +151,14 @@ prompt_for_comedic_script = [
     }
 ]
 
-body = {
-  "model": model_name,
-  "messages": prompt_for_comedic_script,
-  "temperature": 0,
-  "max_tokens": 8192
+comedic_script_payload = {
+    "model": model_name,
+    "messages": prompt_for_comedic_script,
+    "temperature": 0.6,
+    "max_tokens": 8192
 }
 
-with s.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=body) as resp:
+with s.post(url, headers={"Authorization": f"Bearer {api_key}"}, json=comedic_script_payload) as resp:
     comedic_script = resp.json()['choices'][0]['message']['content']
 
 output_file_name = model_name.replace('/', '-') + '_comedic-script.txt'

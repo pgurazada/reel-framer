@@ -1,34 +1,29 @@
- Title: The SCD-Fighting Superhero Twins
+ Characters:
+1. Vertex Pharmaceuticals and CRISPR Therapeutics (represented by two superheroes)
+2. Bluebird Bio (represented by another superhero)
+3. Emmanuelle Charpentier and Jennifer Doudna (represented by scientist superheroes)
+4. CSIR-Institute of Genomics and Integrative Biology (CSIR-IGIB) scientists (represented by scientist superheroes)
 
-Characters:
-1. Casgevy (Superhero with CRISPR/Cas9 powers)
-2. Lyfgenia (Superhero with Emmanuelle Charpentier and Jennifer Doudna's powers)
-3. Dr. Vertex (Scientist)
-4. Dr. Bluebird (Scientist)
-5. Emmanuelle Charpentier (Scientist)
-6. Jennifer Doudna (Scientist)
-7. Debojyoti Chakraborty (Lead Scientist at CSIR-IGIB)
+Scene: The US Food and Drug Administration (USFDA)
 
-Scene: The US Food and Drug Administration (USFDA) approved two gene therapies for sickle cell disease (SCD) in patients 12 years and older.
+(Vertex Pharmaceuticals and CRISPR Therapeutics enter the scene, followed by Bluebird Bio.)
 
-Casgevy: Hey Lyfgenia, you know what's awesome? The USFDA just approved our gene therapies for SCD!
+Vertex Pharmaceuticals (Superhero 1): Hey, CRISPR Therapeutics! Let's team up and save the day!
 
-Lyfgenia: That's fantastic, Casgevy! Our combined powers make us the perfect sickle cell-fighting duo!
+CRISPR Therapeutics (Superhero 2): Absolutely! We've got Cas9 technology, and together, we can conquer sickle cell disease!
 
-Dr. Vertex: Indeed, Casgevy and Lyfgenia's therapies are a breakthrough. They use CRISPR/Cas9 and Emmanuelle Charpentier and Jennifer Doudna's discoveries.
+Bluebird Bio (Superhero 3): Count me in! I've got Lyfgenia gene therapy approved for SCD, too!
 
-Dr. Bluebird: That's right! Both therapies involve modifying patients' blood stem cells and giving them back as a one-time infusion.
+Scientist 1 (Emmanuelle Charpentier): Hold on! We're the ones who discovered CRISPR/Cas9!
 
-Casgevy: And we're not the only ones! Debojyoti Chakraborty and his team at CSIR-IGIB are working on a similar therapy.
+Scientist 2 (Jennifer Doudna): That's right! We should join forces, too!
 
-Lyfgenia: That's great! The more superheroes, the better!
+Scientist 3 (CSIR-IGIB scientist): Don't worry, we're working on our own gene therapy for SCD using CRISPR!
 
-Emmanuelle Charpentier: Thank you, Casgevy and Lyfgenia. Your work is inspiring, and we're honored to be part of your team.
+(All superheroes form a circle and start discussing their plans.)
 
-Jennifer Doudna: Absolutely! We're excited to see the impact your therapies will have on sickle cell patients.
+Superhero 1: Alright, everyone! Let's combine our powers to save the world from sickle cell disease!
 
-Casgevy and Lyfgenia: Thank you, Emmanuelle and Jennifer! Let's keep fighting the good fight!
+Superhero 3: And remember, we're all in this together!
 
-(End with a punchline:)
-
-Casgevy: And who knows, maybe one day we'll have a whole team of sickle cell-fighting superheroes!
+(Scene ends with a group high-five and a punchline.)
