@@ -1,0 +1,33 @@
+[Scene: US Food and Drug Administration (USFDA) headquarters]
+
+USFDA: (Addressing the media) We're thrilled to announce the approval of two gene therapies for sickle cell disease, Casgevy and Lyfgenia!
+
+[Cut to: Vertex Pharmaceuticals and CRISPR Therapeutics]
+
+Vertex Pharmaceuticals: (Excitedly) Casgevy is a game-changer for SCD patients. CRISPR/Cas9 technology allows us to precisely edit the genome and fix the genetic defect causing the disease.
+
+CRISPR Therapeutics: (Nodding) Together, we're bringing hope to SCD patients worldwide.
+
+[Cut to: Bluebird Bio]
+
+Bluebird Bio: (Smiling) Lyfgenia is another major breakthrough. Our gene therapy targets the root cause of SCD, offering patients a chance at a healthier life.
+
+[Cut to: India (highest number of SCD carriers in the world)]
+
+Debojyoti Chakraborty: (Passionately) India has the highest number of SCD carriers. We're working on a gene therapy using CRISPR/Cas9 at CSIR-IGIB.
+
+Scientists at CSIR-IGIB: (Determined) Our therapy is set for phase-1 clinical trials in India, in collaboration with AIIMS and the Department of Science and Technology.
+
+[Cut to: All India Institute of Medical Sciences (AIIMS) in Delhi]
+
+Doctor at AIIMS: (Enthusiastically) We're excited to be part of this groundbreaking research. Together, we can make a difference in the lives of SCD patients in India.
+
+[Cut to: Department of Science and Technology]
+
+DST Official: (Confidently) The Government of India is committed to supporting this research. Our goal is to eliminate SCD by 2047 through our National Sickle Cell Anaemia Elimination Mission.
+
+[Cut back to: USFDA]
+
+USFDA: (Concluding) Casgevy and Lyfgenia are just the beginning. The future of gene therapy for SCD looks bright, and we're proud to be a part of it.
+
+[End scene]
