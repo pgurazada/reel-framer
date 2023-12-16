@@ -5,3 +5,4 @@ Implementation of [ReelFramer: ReelFramer: Human-AI Co-Creation for News-to-Vide
 - Mixtral 8X7B v 0.1
 - Open Orca Mistral 7b
 - Zephyr 7b $\beta$
+- Gemini Pro
